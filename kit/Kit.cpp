@@ -2162,7 +2162,6 @@ void lokit_main(
                 bool displayVersion,
 #else
                 int docBrokerSocket,
-                const std::string& userInterface,
 #endif
                 std::size_t numericIdentifier
                 )
@@ -2466,7 +2465,7 @@ void lokit_main(
 #ifndef IOS
         // Was not done by the preload.
         // For iOS we call it in -[AppDelegate application: didFinishLaunchingWithOptions:]
-        setupKitEnvironment(userInterface);
+        setupKitEnvironment();
 #endif
 
 #if (defined(__linux__) && !defined(__ANDROID__)) || defined(__FreeBSD__)

@@ -234,7 +234,6 @@ public:
     static bool DummyLOK;
     static std::string FuzzFileName;
 #endif
-    static std::string UserInterface;
     static std::string ConfigFile;
     static std::string ConfigDir;
     static std::string SysTemplate;

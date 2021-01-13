@@ -36,7 +36,6 @@ void lokit_main(
                 bool displayVersion,
 #else
                 int docBrokerSocket,
-                const std::string& userInterface,
 #endif
                 std::size_t numericIdentifier
                 );
