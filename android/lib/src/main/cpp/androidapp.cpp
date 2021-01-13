@@ -317,8 +317,7 @@ Java_org_libreoffice_androidlib_LOActivity_createLOOLWSD(JNIEnv *env, jobject in
         closeDocument();
         return;
     }
-    const std::string userInterfaceMode = std::string(env->GetStringUTFChars(uiMode, nullptr));
-    setupKitEnvironment(userInterfaceMode);
+    setupKitEnvironment();
     lokInitialized = true;
     libreofficekit_initialize(env, dataDir, cacheDir, apkFile, assetManager);
 

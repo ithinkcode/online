@@ -184,10 +184,7 @@ static void updateTemplates(NSData *data, NSURLResponse *response)
     if (!trace)
         trace = strdup("warning");
 
-    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad)
-        setupKitEnvironment("notebookbar");
-    else
-        setupKitEnvironment("");
+    setupKitEnvironment();
 
     Log::initialize("Mobile", trace, false, false, {});
     Util::setThreadName("main");
