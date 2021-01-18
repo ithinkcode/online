@@ -12,7 +12,7 @@
 
 #include <Log.hpp>
 
-inline void setupKitEnvironment()
+inline void setupKitEnvironment(const std::string& userInterface)
 {
     // Setup & check environment
     const std::string layers(
@@ -44,9 +44,8 @@ inline void setupKitEnvironment()
         options += ":profile_events";
 #endif
 
-    // Activate notebookbar on core. Because the UI mode can be changed dynamically
-    // it makes sense to activate it from the beginning.
-    options += ":notebookbar";
+    if (userInterface == "notebookbar")
+        options += ":notebookbar";
 
 //    options += ":sc_no_grid_bg"; // leave this disabled for now, merged-cells needs more work.
 
